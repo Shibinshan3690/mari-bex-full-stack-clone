@@ -9,17 +9,14 @@ import { useNavigate } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import * as yup from 'yup';
 import { login } from '../../Redux/Auth/Authaction';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 let schema=yup.object().shape({
   email:yup.string()
   .email("Email should be valid").required("Email is required"),
   password:yup.string().required("Password is required"),
-
 
 })
 
@@ -49,7 +46,7 @@ useEffect(()=>{
         navigate("/")
         toast.success("succeesfull registration")
     }else{
-         toast.error("correct the email and password")
+     
     }
 },[navigate,isError,isLoading])
 

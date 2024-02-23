@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { login, register } from "./Authaction"
-import { getUserfromLocalStorage } from "../../Utils/Util"
+import { getUserfromLocalStorage} from "../../Utils/Util"
 
 
 
